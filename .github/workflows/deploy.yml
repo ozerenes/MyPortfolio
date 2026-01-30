@@ -36,8 +36,12 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           VITE_DEPLOY_TARGET: gh-pages
 
+      # Pages repo'da "GitHub Actions" olarak açılmamışsa:
+      # Settings → Pages → Build and deployment → Source: "GitHub Actions" seçin.
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
