@@ -33,9 +33,8 @@ npm run build
 ### Seçenek 1: GitHub Actions (önerilen)
 
 1. Repoyu GitHub’a push edin.
-2. **Zorunlu:** **Settings → Pages → Build and deployment → Source:** **“GitHub Actions”** seçin.  
-   Bu adım yapılmazsa workflow’da `Get Pages site failed` / `HttpError: Not Found` alırsınız.
-3. `main` branch’e her push’ta workflow build alır ve Pages’e deploy eder.
+2. **Settings → Pages → Build and deployment → Source:** **“Deploy from a branch”** seçin, **Branch:** `gh-pages` (ve klasör `/ (root)`).
+3. `main` branch’e her push’ta workflow build alır ve `gh-pages` branch’ine yükler; Pages bu branch’ten yayınlar.
 4. Site: `https://<kullanici>.github.io/Portfolio/`
 
 ### Seçenek 2: Manuel (gh-pages)
@@ -46,8 +45,6 @@ npx gh-pages -d dist
 ```
 
 Repo adı farklıysa `vite.config.js` içinde `repoName` değişkenini güncelleyin.
-
-**CI/CD hatası:** `Get Pages site failed` veya `HttpError: Not Found` görüyorsanız, repoda **Settings → Pages** bölümünde **Source** mutlaka **“GitHub Actions”** olmalı. “Deploy from a branch” seçiliyse bu hata oluşur.
 
 ### Base path’i değiştirmek
 
