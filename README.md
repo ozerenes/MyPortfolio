@@ -33,9 +33,9 @@ npm run build
 ### Seçenek 1: GitHub Actions (önerilen)
 
 1. Repoyu GitHub’a push edin.
-2. **Settings → Pages → Build and deployment → Source:** **“Deploy from a branch”** seçin, **Branch:** `gh-pages` (ve klasör `/ (root)`).
+2. **Settings → Pages → Build and deployment → Source:** **“Deploy from a branch”** seçin, **Branch:** **`gh-pages`** (klasör: `/ (root)`). **`main` seçiliyse sayfa beyaz kalır ve `/src/main.jsx` 404 hatası alırsınız** — build çıktısı sadece `gh-pages` branch’inde.
 3. `main` branch’e her push’ta workflow build alır ve `gh-pages` branch’ine yükler; Pages bu branch’ten yayınlar.
-4. Site: `https://<kullanici>.github.io/Portfolio/`
+4. Site: `https://<kullanici>.github.io/<repo-adı>/` (örn. `MyPortfolio` repo ise: `.../MyPortfolio/`)
 
 ### Seçenek 2: Manuel (gh-pages)
 
