@@ -37,6 +37,22 @@ npm run build
 3. `main` branch’e her push’ta workflow build alır ve `gh-pages` branch’ine yükler; Pages bu branch’ten yayınlar.
 4. Site: `https://<kullanici>.github.io/<repo-adı>/` (örn. `MyPortfolio` repo ise: `.../MyPortfolio/`)
 
+#### Sayfa beyaz / `GET .../src/main.jsx` veya `favicon.svg` 404
+
+Bu hatalar **Pages’in `main` branch’inden yayın yaptığını** gösterir (kaynak kod sunuluyor, build değil).
+
+**Yapmanız gerekenler:**
+
+1. GitHub’da repoya gidin → **Settings** → **Pages**.
+2. **Build and deployment** bölümünde:
+   - **Source:** **“Deploy from a branch”** olsun (**“GitHub Actions”** değil).
+   - **Branch:** **`gh-pages`** seçin (klasör: **/ (root)**). **`main` seçili olmasın.**
+3. Kaydedin. Birkaç dakika bekleyin.
+4. **Actions** sekmesinde “Deploy to GitHub Pages” workflow’unun yeşil (başarılı) çalıştığından emin olun. Başarısızsa hata mesajına göre düzeltin.
+5. Tarayıcıda **sert yenileme** yapın (Ctrl+Shift+R / Cmd+Shift+R) veya gizli pencerede açın.
+
+Hâlâ 404 alıyorsanız: Repo sayfasında branch listesinden **`gh-pages`** branch’ine geçin; kökte **`index.html`**, **`assets/`** klasörü ve **`favicon.svg`** görünmeli. Bunlar yoksa workflow çalışmamış veya hata vermiştir.
+
 ### Seçenek 2: Manuel (gh-pages)
 
 ```bash
