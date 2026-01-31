@@ -12,7 +12,7 @@ export const data = {
     email: 'enesozer@yahoo.com',
     phone: '+90 554 654 42 30',
     linkedin: 'https://www.linkedin.com/in/enes-%C3%B6zer-b818021b0/',
-    github: 'https://github.com/enesozer',
+    github: 'https://github.com/ozerenes',
     cta: {
       primary: 'Projeleri İncele',
       secondary: 'İletişime Geç',
@@ -333,7 +333,7 @@ export const dataEn = {
     email: 'enesozer@yahoo.com',
     phone: '+90 554 654 42 30',
     linkedin: 'https://www.linkedin.com/in/enes-%C3%B6zer-b818021b0/',
-    github: 'https://github.com/enesozer',
+    github: 'https://github.com/ozerenes',
     cta: {
       primary: 'View Projects',
       secondary: 'Get in Touch',
